@@ -1,0 +1,5 @@
+commit c43f923bf7446072fc2db18efb6d0e01cb87d41b
+Author: practise <eclipse_sm@mail.ru>
+Date:   Tue Feb 23 12:26:07 2016 +0300
+
+    Change status.txt
