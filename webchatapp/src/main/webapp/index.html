@@ -1,13 +1,165 @@
-<!DOCTYPE html>
+<!DOCTYPE>
 <html>
 <head lang="en">
-    <meta charset="UTF-8">
-    <title>Default chat</title>
-    <script src="js/chat.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<title>Чат</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script>
+    window.onload = function() 
+    {
+      document.getElementById('main_chat').scrollTop=document.getElementById('main_chat').scrollHeight;
+    }
+</script>
+<script src="js/chat.js"></script>
 </head>
+
 <body onload="run();">
-    <input id="newMessage" type="text" placeholder="РРјРµРµС‚Рµ С€РѕС‚Р° СЃРєР°Р·Р°С‚СЊ ?">
-    <button id="sendButton" type="button">РћС‚РїСЂР°РІРёС‚СЊ</button>
+
+<div class="main">
+	<div class="main_name">
+		<div class="main_name2">
+        	Джонни
+        </div>
+        
+        
+        <div style="clear:both"></div>
+	</div>
+	<div id="main_chat">
     <div id="history" style="display:table;width:100%;font-family: 'Comic Sans MS', cursive, sans-serif"></div>
+    <!--
+		<div class="chat_mes">
+			
+            <div class="mes_content">
+            	<div class="mes_name">
+                	<b>Ванесса</b>
+                </div>
+                <div class="mes_text">
+                	Привет! 
+                </div>
+            </div>
+            <div class="mes_time">
+            	15:34
+            </div>
+		</div>
+          <div style="clear:both"></div>
+		<div class="chat_mes2">
+			
+            <div class="mes_content">
+            	<div class="mes_name">
+                	<b>Джонни</b>
+                </div>
+                <div class="mes_text">
+                	Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! Приветик! 
+                </div>
+            </div>
+            <div class="mes_time">
+            	15:34
+            </div>
+		</div>
+        
+        <div style="clear:both"></div>
+        
+        <div class="chat_mes">
+			
+            <div class="mes_content">
+            	<div class="mes_name">
+                	<b>Ванесса</b>
+                </div>
+                <div class="mes_text">
+                	Как дела! 
+                </div>
+            </div>
+            <div class="mes_time">
+            	15:34
+            </div>
+           </div>
+           
+            <div style="clear:both"></div>
+            
+            <div class="chat_mes2">
+			
+            <div class="mes_content">
+            	<div class="mes_name">
+                	<b>Джонни</b>
+                </div>
+                <div class="mes_text">
+                	Нормально! 
+                </div>
+            </div>
+            <div class="mes_time">
+            	15:34
+            </div>
+		</div>
+        
+        <div style="clear:both"></div>
+        
+         <div class="chat_mes">
+			
+            <div class="mes_content">
+            	<div class="mes_name">
+                	<b>Ванесса</b>
+                </div>
+                <div class="mes_text">
+                	ясно 
+                </div>
+            </div>
+            <div class="mes_time">
+            	15:34
+            </div>
+           </div>
+           
+            <div style="clear:both"></div>
+            
+         <div class="chat_mes2">
+			
+            <div class="mes_content">
+            	<div class="mes_name">
+                	<b>Джонни</b>
+                </div>
+                <div class="mes_text">
+                	А у тебя? 
+                </div>
+            </div>
+            <div class="mes_time">
+            	15:34
+            </div>
+		</div>
+        
+        <div style="clear:both"></div>
+        
+        <div class="chat_mes">
+			
+            <div class="mes_content">
+            	<div class="mes_name">
+                	<b>Ванесса</b>
+                </div>
+                <div class="mes_text">
+                	Отлично
+                </div>
+            </div>
+            <div class="mes_time">
+            	15:34
+            </div>
+           </div>
+           
+           <div style="clear:both"></div>
+            -->
+		
+	</div>
+    <div class="input_text">
+        <div class="input_text2">
+        	  <textarea id="newMessage" cols="50" rows="3" placeholder="Введите сообщение"></textarea>
+        </div>
+        <div class="send">
+        	<button id="sendButton" type="button">Отправить</button>
+        </div>
+    			
+    </div>
+
+</div>
+
+
+
+
 </body>
-</html> 
+</html>

@@ -1,0 +1,142 @@
+@charset "windows-1251";
+/* CSS Document */
+
+body {
+	background-image:url(back3.png);
+	background-size:cover;
+	background-repeat:repeat;
+}
+.main {
+	background-color:#B68FA;
+	width:600px;
+	height:600px;
+	margin-left:auto;
+	margin-right:auto;
+	border: solid 2px  #EBEBEB;
+}
+
+.main_name {
+	background-color:#FFF;
+	color: #0099FF;
+	font-family:Arial, Helvetica, sans-serif;
+	padding-top:5px;
+	padding-bottom:5px;
+	width:100%;
+	border: solid 1px #CCCCCC;
+}
+
+.main_name2 {
+	margin-left:260px;
+	float:left;
+}
+
+.main_name_edit {
+	margin-left:10px;
+	float:left;
+}
+
+.main_name_network {
+	margin-left:170px;
+	float:left;
+}
+
+#main_chat {
+	overflow-y: auto;
+	height:500px;
+	background-color:#CCC;
+}
+
+#sendButton {
+	font-weight: 700;
+  color: white;
+  text-decoration: none;
+  padding: .8em 1em calc(.8em + 3px);
+  border-radius: 3px;
+  background: #0CF;
+  box-shadow: 0 -3px #0099FF inset;
+  transition: 0.2s;
+}
+
+#sendButton:hover {
+	background: background: rgb(53, 167, 110);
+}
+#sendButton:active { 
+background: rgb(33,147,90);
+ } /* при нажатии */
+
+.chat_mes {
+	background-color: #EBEBEB;
+	padding-top:5px;
+	width:100%;
+	overflow:auto;
+}
+
+.chat_mes2 {
+	background-color: #FFF;
+		padding-top:5px;
+		width:100%;
+		overflow:auto;
+}
+
+.mes_photo {
+	margin-left:20px;
+	margin-bottom:20px;
+	float:left;
+}
+
+.mes_content {
+	padding-top:10px;
+	float:left;
+	width:500px;
+	padding-left:10px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+.mes_name {
+	color: #115A89;
+}
+.mes_text {
+	width:400px;
+	margin-top:3px;
+	padding-bottom:15px;
+}
+
+.mes_time {
+	padding-top:20px;
+	float:left;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+.ups {
+	
+}
+.input_text {
+	background-color:#fff;
+	width:100%;
+	height:69px;
+}
+.input_text2 {
+	margin-left:20px;
+	padding-top:5px;
+	padding-bottom:6px;
+	float:left;
+}
+.input_text2 textarea {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:15px;
+}
+.edit {
+	float:left;
+	margin-top:17px;
+	margin-left:10px;
+}
+.delete {
+	float:left;
+	margin-top:16px;
+	margin-left:10px;
+}
+.send {
+	float:left;
+	margin-top:15px;
+	margin-left:30px;
+}
