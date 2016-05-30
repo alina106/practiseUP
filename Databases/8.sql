@@ -1,0 +1,1 @@
+SELECT users.name, messages.text, messages.date FROM messages, users WHERE users.id = messages.user_id ORDER BY date;

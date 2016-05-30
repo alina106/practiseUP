@@ -1,0 +1,1 @@
+SELECT DATEDIFF(dd, (SELECT messages.date FROM messages ORDER BY date LIMIT 1), CURDATE());

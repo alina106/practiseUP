@@ -1,0 +1,1 @@
+SELECT messages.text FROM messages ORDER BY date DESC LIMIT 5;

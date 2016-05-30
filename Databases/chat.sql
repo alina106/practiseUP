@@ -1,14 +1,8 @@
 
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
-
+CREATE DATABASE  IF NOT EXISTS `chat` 
+/*!40100 DEFAULT CHARACTER SET cp1251 COLLATE cp1251_bin */;
+USE `chat`;
 --
 -- База данных: `chat`
 --
@@ -21,27 +15,29 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `Messages` (
   `id` int(11) NOT NULL,
-  `text` varchar(299) CHARACTER SET cp1251 NOT NULL,
-  `date` varchar(299) COLLATE utf8_bin NOT NULL,
+  `text` varchar(299) NOT NULL,
+  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `user_id` int(11) NOT NULL,
-  KEY `user_id` (`user_id`),
-  KEY `date` (`date`(255)),
-  KEY `user_id_2` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=cp1251;
 
 --
 -- Дамп данных таблицы `Messages`
 --
 
+LOCK TABLES `Messages` WRITE;
 INSERT INTO `Messages` (`id`, `text`, `date`, `user_id`) VALUES
-(1, 'qqqq', '1111', 1),
-(2, 'wwww', '2222', 2),
-(3, 'уууу', '3333', 3),
-(4, 'ееее', '4444', 4),
-(5, 'нннн', '5555', 5),
-(6, 'гггг', '6666', 6),
-(9, 'щщщщ', '9999', 9),
-(10, 'фффф', '1010', 10);
+(1, ‘Hello, my friend!’, ’2016-05-01 05:33:11’, 1),
+(2, ‘Hey! How are you?’, '2016-05-02 05:33:11', 2),
+(2, ‘hello’, '2016-05-03 05:33:11', 2),
+(3, ‘ok ok’, '2016-05-03 05:33:11', 3),
+(4, ‘not ok ok’, '2016-05-04 05:33:11', 4),
+(5, ‘where am i?’, '2016-05-05 05:33:11', 5),
+(6, ‘i dont know’, '2016-05-06 05:33:11', 6),
+(9, ‘why?’, '2016-05-07 05:33:11', 9),
+(10, ‘WTF’, '2016-05-08 05:33:11', 10);
+UNLOCK TABLES;
 
 -- --------------------------------------------------------
 
@@ -51,39 +47,32 @@ INSERT INTO `Messages` (`id`, `text`, `date`, `user_id`) VALUES
 
 CREATE TABLE `Users` (
   `id` int(11) NOT NULL,
-  `name` varchar(299) CHARACTER SET cp1251 NOT NULL,
-  UNIQUE KEY `id_3` (`id`),
-  UNIQUE KEY `id_4` (`id`),
-  KEY `id` (`id`),
-  KEY `id_2` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+  `name` varchar(299) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=cp1251;
 
 --
 -- Дамп данных таблицы `Users`
 --
 
+LOCK TABLES `Users` WRITE;
 INSERT INTO `Users` (`id`, `name`) VALUES
-(1, 'алина'),
-(2, 'саша'),
-(3, 'галя'),
-(4, 'дима'),
-(5, 'паша'),
-(6, 'катя'),
-(7, 'вадим'),
-(8, 'петя'),
-(9, 'аня'),
-(10, 'оля');
+(1, 'Alina'),
+(2, 'Alex'),
+(3, 'Sam'),
+(4, 'Nina'),
+(5, 'Hector'),
+(6, 'Clare'),
+(7, 'Lana'),
+(8, 'Kate'),
+(9, 'James'),
+(10, 'Max');
+UNLOCK TABLES;
 
---
--- Ограничения внешнего ключа сохраненных таблиц
---
 
 --
 -- Ограничения внешнего ключа таблицы `Messages`
 --
-ALTER TABLE `Messages`
-  ADD CONSTRAINT `Messages_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `Users` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+ALTER TABLE `Messages`
+ ADD CONSTRAINT `Messages` FOREIGN KEY (`user_id`) REFERENCES `Users` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
