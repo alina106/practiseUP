@@ -1,38 +1,19 @@
-package com.company;
-
+package chat;
 import java.sql.Timestamp;
 
-/**
- * Created by alinanamdag on 18.02.16.
- */
-public class Message implements Comparable<Message> {
-
+public class Message implements Comparable<Message>{
     private String id;
     private String message;
-    private String author;
     private Timestamp timestamp;
+    private String author;
 
-    public Message(){
-
-    }
-
-    public Message(String id, String author, String message, Timestamp timestamp) {
+    public Message(String id, String author, Timestamp time, String message) {
         this.id = id;
-        this.message = message;
         this.author = author;
-        this.timestamp = timestamp;
+        this.message = message;
+        this.timestamp = time;
     }
-
-    public Timestamp getTimestamp() {
-        return timestamp;
-    }
-
-    public void setTimestamp(Timestamp timestamp) {
-        this.timestamp = timestamp;
-    }
-
     public String getAuthor() {
-
         return author;
     }
 
@@ -40,17 +21,7 @@ public class Message implements Comparable<Message> {
         this.author = author;
     }
 
-    public String getMessage() {
-
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
     public String getId() {
-
         return id;
     }
 
@@ -58,6 +29,21 @@ public class Message implements Comparable<Message> {
         this.id = id;
     }
 
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public Timestamp getTime() {
+        return timestamp;
+    }
+
+    public void setTime(Timestamp time) {
+        this.timestamp = time;
+    }
     @Override
     public String toString() {
         return "{" +
@@ -71,6 +57,4 @@ public class Message implements Comparable<Message> {
     public int compareTo(Message o) {
         return this.timestamp.compareTo(o.timestamp);
     }
-
-
 }

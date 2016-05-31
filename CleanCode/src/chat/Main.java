@@ -1,9 +1,9 @@
-package com.company;
-
+package chat;
 import java.io.IOException;
 
 public class Main{
     public static void main(String[] args) throws IOException {
-        Chat storage = new Chat();
+        ChatStore storage = new ChatStore();
+        storage.startChat();
     }
 }
